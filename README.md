@@ -20,7 +20,7 @@ We've looked at the different ways we can interact with our associated models th
 Sometimes, it may be appropriate for a user to create an instance of our join model directly. Think back to the hospital domain from our previous lab. It makes perfect sense that a user would go to `appointments/new` and fill out a form to create a new appointment.
 
 ```erb
-<%= form_for @appointment do |f| %>
+<%= form_for @appointment do |f| %> 
   <%= f.datetime_select :appointment_datetime %>
   <%= f.collection_select :doctor, Doctor.all, :id, :name %>
   <%= f.collection_select :patient, Patient.all, :id, :name %>
